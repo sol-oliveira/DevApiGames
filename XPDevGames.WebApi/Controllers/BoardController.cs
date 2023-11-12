@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using XPDevGames.WebApi.Models;
+﻿using Microsoft.AspNetCore.Mvc;
+using XPDevGames.Domain.Models;
 
 namespace XPDevGames.WebApi.Controllers
 {

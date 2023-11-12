@@ -1,12 +1,13 @@
-﻿using Microsoft.AspNetCore.Components.Web;
-using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.Extensions.Hosting;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace XPDevGames.WebApi.Models
+namespace XPDevGames.Domain.Models
 {
     public class Board
     {
-
         public Board(string gameTitle, string description, string rules)
         {
 
@@ -23,9 +24,5 @@ namespace XPDevGames.WebApi.Models
         public string Description { get; set; }
         public string Rules { get; set; }
         public DateTime CreatedAt { get; set; }
-
-     
-
-
     }
 }

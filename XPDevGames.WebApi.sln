@@ -5,6 +5,15 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPDevGames.WebApi", "XPDevGames.WebApi\XPDevGames.WebApi.csproj", "{B4747102-D8DE-4E25-BF92-9741546CC269}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPDevGames.Domain", "XPDevGames.Domain\XPDevGames.Domain.csproj", "{6742ADBA-C830-4885-919F-4B78A531D594}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPDevGames.Infrastructure", "XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj", "{C9236D5D-01F3-4FBA-9CAB-957878B456A4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{06EF195E-1BA0-4872-80DC-5ACE89C10710}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,14 @@ Global
 		{B4747102-D8DE-4E25-BF92-9741546CC269}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4747102-D8DE-4E25-BF92-9741546CC269}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4747102-D8DE-4E25-BF92-9741546CC269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6742ADBA-C830-4885-919F-4B78A531D594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6742ADBA-C830-4885-919F-4B78A531D594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6742ADBA-C830-4885-919F-4B78A531D594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6742ADBA-C830-4885-919F-4B78A531D594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9236D5D-01F3-4FBA-9CAB-957878B456A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9236D5D-01F3-4FBA-9CAB-957878B456A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9236D5D-01F3-4FBA-9CAB-957878B456A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9236D5D-01F3-4FBA-9CAB-957878B456A4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
