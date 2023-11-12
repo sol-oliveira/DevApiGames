@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
-using XPDevGames.Domain.Models;
+using XPDevGames.Infrastructure.Repositories;
 
 namespace XPDevGames.WebApi.Controllers
 {
@@ -11,9 +10,9 @@ namespace XPDevGames.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {   
-            var post = new Post("titulo de teste", "description de teste", 1);          
+            var post = new PostRepository();          
 
-            return Ok(post);
+            return Ok(post.Get());
         }
     }
 }

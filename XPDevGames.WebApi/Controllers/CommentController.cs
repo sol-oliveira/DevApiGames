@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using XPDevGames.Domain.Models;
+using XPDevGames.Infrastructure.Repositories;
 
 namespace XPDevGames.WebApi.Controllers
 {
@@ -10,9 +10,9 @@ namespace XPDevGames.WebApi.Controllers
         [HttpGet]
         public IActionResult Index()
         {
-            Comment obj = new Comment("titulo de teste", "description de teste", "Pedro", 1);
+            var obj = new CommentRepository();
             
-            return Ok(obj);
+            return Ok(obj.Get());
         }
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("XPDevGames.Infrastructure")]
+[assembly: AssemblyTitle("XP")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("XPI Inc.")]
-[assembly: AssemblyProduct("XPDevGames.Infrastructure")]
+[assembly: AssemblyProduct("XP")]
 [assembly: AssemblyCopyright("Copyright © XPI Inc. 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("c9236d5d-01f3-4fba-9cab-957878b456a4")]
+[assembly: Guid("418ffc23-62c3-4f57-90f4-ffa452cafb0f")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using XPDevGames.Domain.Models;
+using XPDevGames.Infrastructure.Repositories;
 
 namespace XPDevGames.WebApi.Controllers
 {
@@ -7,11 +8,14 @@ namespace XPDevGames.WebApi.Controllers
     [ApiController]
     public class BoardController : ControllerBase
     {
+        
+
         [HttpGet]
         public IActionResult Get()
         {
-            Board obj = new Board("Termo", "o jogo termo tem como objetivo adivinhação de palavras", "Não pode  passar  de  06 palavras"); 
-            return Ok(obj);
+            var obj = new BoardRepository();
+
+            return Ok(obj.Get());
         }
     }
 }

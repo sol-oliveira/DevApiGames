@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\XPDevGames.Domain\XPDevGames.Domain.csproj" />
+    <ProjectReference Include="..\XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
