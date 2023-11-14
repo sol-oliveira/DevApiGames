@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using XPDevGames.Domain.Dto;
 using XPDevGames.Domain.Models;
 using XPDevGames.Infrastructure.Repositories;
 
@@ -26,14 +27,14 @@ namespace XPDevGames.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody]Board board)
-        {          
+        public IActionResult Add([FromBody] BoardDto board)
+        {
+            var _boarRepository = new BoardRepository();
 
-            var bordRepository = new BoardRepository();
+            _boarRepository.Add(board);
 
-            bordRepository.Add(board);
 
-            return Ok("ffs");
+            return Ok("board inserido com sucesso");
         }
 
 

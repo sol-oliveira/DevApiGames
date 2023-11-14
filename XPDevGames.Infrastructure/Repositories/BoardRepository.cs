@@ -1,6 +1,7 @@
 ﻿using Dapper;
 using System.Data;
 using System.Data.SqlClient;
+using XPDevGames.Domain.Dto;
 using XPDevGames.Domain.Models;
 
 namespace XPDevGames.Infrastructure.Repositories
@@ -9,37 +10,45 @@ namespace XPDevGames.Infrastructure.Repositories
     {
         private const string connectionString = "";
           
-         public List<Board> GetAll()
+         public List<BoardDto> GetAll()
          {
             var sql = "SELECT GAME_TITLE AS GameTitle, DESCRIPTION, RULES, CREATED_AT FROM BOARD";
 
             using IDbConnection connection = new SqlConnection(connectionString);
 
-            var board = connection.Query<Board>(sql);
+            var boardDto = connection.Query<BoardDto>(sql);
 
-            return board.ToList();
+            return boardDto.ToList();
          }
 
 
-        public Board GetById(int id)
+        public BoardDto GetById(int id)
         {
-            var sql = "SELECT ID, GAME_TITLE AS GameTitle, DESCRIPTION, RULES, CREATED_AT FROM BOARD WHERE ID = @id";
+            var sql = "SELECT GAME_TITLE AS GameTitle, DESCRIPTION, RULES, CREATED_AT FROM BOARD WHERE ID = @id";
 
             using IDbConnection connection = new SqlConnection(connectionString);
 
-            var board = connection.QueryFirstOrDefault<Board>(sql, new { ID = id });
+            var boardDto = connection.QueryFirstOrDefault<BoardDto>(sql, new { ID = id });
 
-            return board;
+            return boardDto;
         }
 
-        public void Add(Board board)
+        public void Add(BoardDto board)
         {
-            var sql = $"INSERT INTO BOARD (GAME_TITLE, DESCRIPTION, RULES, CREATED_AT) VALUES ('{board.GameTitle}', '{board.Description}', '{board.Rules}', CURRENT_TIMESTAMP )";
+            var sql = "INSERT INTO BOARD (GAME_TITLE, DESCRIPTION, RULES, CREATED_AT) VALUES (@GameTitle, @Description, @Rules, CURRENT_TIMESTAMP)";
 
-            
+            var parameters = new
+            {
+                GameTitle = board.GameTitle,
+                Description = board.Description,
+                Rules = board.Rules
+            };
+
+
             using IDbConnection connection = new SqlConnection(connectionString);
 
-            connection.Execute(sql);
+        
+            connection.Execute(sql, parameters);
         }
     }
 }

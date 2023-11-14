@@ -7,19 +7,8 @@
         public string Description { get; set; }
         public string Rules { get; set; }
         public DateTime CreatedAt { get; set; }
-
-
-        public Board()
-        {            
-
-        }
-        public Board(string gameTitle, string description, string rules)
-        {           
-            GameTitle = gameTitle;
-            Description = description;
-            Rules = rules;
-
-        }
+               
+       
         public Board(string gameTitle, string description, string rules, DateTime created_at)
         {         
             GameTitle = gameTitle;
