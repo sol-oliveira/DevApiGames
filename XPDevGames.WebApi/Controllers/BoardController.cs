@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using XPDevGames.Application.UseCases.Board.AddBoard;
+using XPDevGames.Application.UseCases.Board.GetAll;
+using XPDevGames.Application.UseCases.Board.GetById;
 using XPDevGames.Domain.Dto;
-using XPDevGames.Domain.Models;
-using XPDevGames.Infrastructure.Repositories;
 
 namespace XPDevGames.WebApi.Controllers
 {
@@ -13,26 +14,23 @@ namespace XPDevGames.WebApi.Controllers
         [HttpGet]
         public IActionResult GetAll()
         {
-            var bord = new BoardRepository();
+            var board = new GetAllBoardUseCase().Handle();
 
-            return Ok(bord.GetAll());
+            return Ok(board);
         }
 
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
-            var bord = new BoardRepository();
+            var board = new GetByIdBoardUseCase().Handle(id);
 
-            return Ok(bord.GetById(id));
+            return Ok(board);
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] BoardDto board)
+        public IActionResult Add([FromBody] BoardDto boardDto)
         {
-            var _boarRepository = new BoardRepository();
-
-            _boarRepository.Add(board);
-
+             new AddBoardUseCase().Handle(boardDto);           
 
             return Ok("board inserido com sucesso");
         }

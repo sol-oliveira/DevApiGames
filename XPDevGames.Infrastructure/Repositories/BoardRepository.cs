@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using XPDevGames.Domain.Dto;
-using XPDevGames.Domain.Models;
+
 
 namespace XPDevGames.Infrastructure.Repositories
 {
