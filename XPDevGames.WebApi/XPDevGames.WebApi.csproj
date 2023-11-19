@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XPDevGames.Application\XPDevGames.Application.csproj" />
+    <ProjectReference Include="..\..\..\..\Desktop\XPDevGames.Application\XPDevGames.Application.csproj" />
     <ProjectReference Include="..\XPDevGames.Domain\XPDevGames.Domain.csproj" />
     <ProjectReference Include="..\XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj" />
   </ItemGroup>

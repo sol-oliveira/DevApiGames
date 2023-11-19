@@ -12,7 +12,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XPDevGames.Infrastructure", "XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj", "{BBD5580A-C5AE-441D-BB12-B7B68BCD9889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPDevGames.Infrastructure", "XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj", "{BBD5580A-C5AE-441D-BB12-B7B68BCD9889}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XPDevGames.Application", "..\..\..\Desktop\XPDevGames.Application\XPDevGames.Application.csproj", "{4CEDA06B-762D-4A03-8038-6203BB764AEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{BBD5580A-C5AE-441D-BB12-B7B68BCD9889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BBD5580A-C5AE-441D-BB12-B7B68BCD9889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BBD5580A-C5AE-441D-BB12-B7B68BCD9889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4CEDA06B-762D-4A03-8038-6203BB764AEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4CEDA06B-762D-4A03-8038-6203BB764AEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4CEDA06B-762D-4A03-8038-6203BB764AEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4CEDA06B-762D-4A03-8038-6203BB764AEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

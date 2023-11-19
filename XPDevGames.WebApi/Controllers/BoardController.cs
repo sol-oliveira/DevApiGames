@@ -1,8 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using XPDevGames.Application.UseCases.Board.AddBoard;
-using XPDevGames.Application.UseCases.Board.GetAll;
-using XPDevGames.Application.UseCases.Board.GetById;
+using XPDevGames.Application.UseCases.BoardUseCases.AddBoard;
+using XPDevGames.Application.UseCases.BoardUseCases;
+using XPDevGames.Application.UseCases.BoardUseCases.GetById;
 using XPDevGames.Domain.Dto;
+using XPDevGames.Application.UseCases.BoardUseCases.GetAll;
 
 namespace XPDevGames.WebApi.Controllers
 {
@@ -28,9 +29,9 @@ namespace XPDevGames.WebApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] BoardDto boardDto)
+        public IActionResult Add([FromBody] BoardInput input)
         {
-             new AddBoardUseCase().Handle(boardDto);           
+             new AddBoardUseCase().Handle(input);           
 
             return Ok("board inserido com sucesso");
         }

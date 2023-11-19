@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using XPDevGames.Domain.Dto;
 using XPDevGames.Infrastructure.Repositories;
 
-namespace XPDevGames.Application.UseCases.Board.GetAll
+namespace XPDevGames.Application.UseCases.BoardUseCases.GetAll
 {
     public class GetAllBoardUseCase
     {

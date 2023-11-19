@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\XPDevGames.Domain\XPDevGames.Domain.csproj" />
-    <ProjectReference Include="..\XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\source\repos\XPDevGames.WebApi\XPDevGames.Domain\XPDevGames.Domain.csproj" />
+    <ProjectReference Include="..\..\source\repos\XPDevGames.WebApi\XPDevGames.Infrastructure\XPDevGames.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using XPDevGames.Domain.Dto;
-
+using XPDevGames.Domain.Models;
 
 namespace XPDevGames.Infrastructure.Repositories
 {
@@ -33,7 +33,7 @@ namespace XPDevGames.Infrastructure.Repositories
             return boardDto;
         }
 
-        public void Add(BoardDto board)
+        public void Add(Board board)
         {
             var sql = "INSERT INTO BOARD (GAME_TITLE, DESCRIPTION, RULES, CREATED_AT) VALUES (@GameTitle, @Description, @Rules, CURRENT_TIMESTAMP)";
 

@@ -1,12 +1,9 @@
-﻿namespace XPDevGames.Domain.Dto
+﻿namespace XPDevGames.Application.UseCases.BoardUseCases.AddBoard
 {
-    public class BoardDto
-    {   
+    public class BoardInput
+    {
         public string GameTitle { get; set; }
         public string Description { get; set; }
         public string Rules { get; set; }
-        public DateTime CreatedAt { get; set; }
-
-
     }
 }
