@@ -1,37 +1,42 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using XPDevGames.Application.UseCases.BoardUseCases.AddBoard;
-using XPDevGames.Application.UseCases.BoardUseCases;
-using XPDevGames.Application.UseCases.BoardUseCases.GetById;
-using XPDevGames.Domain.Dto;
+using XPDevGames.Application.UseCases.BoardUseCases.Add;
 using XPDevGames.Application.UseCases.BoardUseCases.GetAll;
+using MediatR;
+using XPDevGames.Application.UseCases.BoardUseCases.GetById;
 
 namespace XPDevGames.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class BoardController : ControllerBase
-    {        
+    {
+        private readonly IMediator _mediator;
+
+        public BoardController(IMediator mediator)
+        {
+            _mediator = mediator;
+        }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var board = new GetAllBoardUseCase().Handle();
+            var board = await _mediator.Send(new BoardInputAll());
 
             return Ok(board);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
-        {
-            var board = new GetByIdBoardUseCase().Handle(id);
+        public async Task<IActionResult> GetById(int id)
+        {            
+            var response = await _mediator.Send(new BoardInputById(id));           
 
-            return Ok(board);
+            return Ok(response);
         }
 
         [HttpPost]
-        public IActionResult Add([FromBody] BoardInput input)
+        public  async Task<IActionResult> Add([FromBody] BoardInput input)
         {
-             new AddBoardUseCase().Handle(input);           
+            await _mediator.Send(input);                  
 
             return Ok("board inserido com sucesso");
         }

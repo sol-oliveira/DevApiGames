@@ -3,10 +3,11 @@ using System.Data;
 using System.Data.SqlClient;
 using XPDevGames.Domain.Dto;
 using XPDevGames.Domain.Models;
+using XPDevGames.Domain.Services;
 
 namespace XPDevGames.Infrastructure.Repositories
 {
-    public class BoardRepository
+    public class BoardRepository : IBoardRepository
     {
         private const string connectionString = "";
           
